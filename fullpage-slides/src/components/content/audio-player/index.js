@@ -30,15 +30,15 @@ const Status = styled.div`
     flex-direction: row;
     align-items: stretch;
   `}
-  height: 106px;  
+  height: ${props => (props.subtitleLines * 38) + 30}px;  
   ${screen.tabletOnly`
-    height: 136px;
+    height: ${props => (props.subtitleLines * 40) + 56}px;
   `}
   ${screen.desktopOnly`
-    height: 93px;
+    height: ${props => (props.subtitleLines * 40) + 13}px;
   `}
   ${screen.hdAbove`
-    height: 109px;
+    height: ${props => (props.subtitleLines * 42) + 25}px;
   `}
 `
 
@@ -162,7 +162,7 @@ class AudioPlayer extends React.Component {
   }
 
   render() {
-    const { audioSrc, audioType, subtitles, isFocus, iconTheme } = this.props
+    const { audioSrc, audioType, subtitles, subtitleLines, isFocus, iconTheme } = this.props
     const { currentTime, muted } = this.state
     let soundIconJSX
     if (iconTheme === 'dark') {
@@ -187,7 +187,7 @@ class AudioPlayer extends React.Component {
             src={audioSrc}
           />
         </audio>
-        <Status>
+        <Status subtitleLines={subtitleLines}>
           <ButtonsBox>
             <Button
               onClick={this._handleClickSoundBtn}
@@ -214,6 +214,7 @@ AudioPlayer.propTypes = {
   audioSrc: PropTypes.string.isRequired,
   audioType: PropTypes.string.isRequired,
   subtitles: PropTypes.array.isRequired,
+  subtitleLines: PropTypes.number,
   iconTheme: PropTypes.oneOf(['dark', 'bright']),
   isChanging: PropTypes.bool.isRequired,
   isFocus: PropTypes.bool.isRequired,
@@ -221,6 +222,7 @@ AudioPlayer.propTypes = {
 
 AudioPlayer.defaultProps = {
   subtitles: [],
+  subtitleLines: 2,
   audioType: 'audio/mpeg',
   iconTheme: 'bright',
 }

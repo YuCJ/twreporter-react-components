@@ -119,9 +119,9 @@ class Colophon extends React.Component {
           </RealtedsBox>
           <InfosBox isFocus={isFocus}>
             <Team team={team} />
-            <Button title="訂閱電子報" to="https://twreporter.us14.list-manage.com/subscribe/post?u=4da5a7d3b98dbc9fdad009e7e&id=e0eb0c8c32"><MailIcon /></Button>
-            <Button title="分享" to="https://www.facebook.com/sharer/sharer.php?u=https://www.twreporter.org/i/high-risk-youth-life-is-a-struggle"><FbIcon /></Button>
-            <Button title="開放原始碼" to="https://github.com/twreporter"><GithubIcon /></Button>
+            <Button title="Subscribe" to="https://twreporter.us14.list-manage.com/subscribe/post?u=4da5a7d3b98dbc9fdad009e7e&id=e0eb0c8c32"><MailIcon /></Button>
+            <Button title="Share" to="https://www.facebook.com/sharer/sharer.php?u=https://www.twreporter.org/i/high-risk-youth-life-is-a-struggle"><FbIcon /></Button>
+            <Button title="Open Source" to="https://github.com/twreporter"><GithubIcon /></Button>
           </InfosBox>
         </Wrapper>
       </Container>

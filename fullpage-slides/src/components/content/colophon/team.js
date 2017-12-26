@@ -27,6 +27,7 @@ const Title = styled.div`
 
 const JobBox = styled.div`
   width: 100%;
+  line-height: 1.36;
   letter-spacing: 1.5px;
   font-size: ${fontSizes.colophonContent.mobile};
   margin-bottom: .65em;
@@ -78,7 +79,7 @@ function buildJobBox(data, index) {
 function Team(props) {
   return (
     <Container>
-      <Title>製作團隊</Title>
+      <Title>Credits</Title>
       {map(props.team, buildJobBox)}
     </Container>
   )

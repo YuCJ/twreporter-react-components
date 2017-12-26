@@ -22,7 +22,7 @@ export const fontSizes = {
     mobile: '48px',
     tablet: '72px',
     desktop: '72px',
-    hd: '144px',
+    hd: '72px',
   },
   mainSubTitle: {
     mobile: '16px',

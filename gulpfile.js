@@ -52,7 +52,7 @@ gulp.task(
 // `/home/nick/codes/twreporter-react/node_modules/twreporter-react-components`
 let customerFolder = process.env.CUSTOMER_FOLDER
 if (typeof customerFolder !== 'string') {
-  customerFolder = path.resolve(__dirname, '../twreporter-react')
+  customerFolder = path.resolve(__dirname, '../static-fe-boilerplate/child-in-relic-eng')
 }
 const moduleFolder = `${customerFolder}/node_modules/@twreporter/react-components`
 
